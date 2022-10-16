@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAT Request</title>
+
+    <style>
+      body {
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      #btn {
+        position: absolute;
+        transition: 0.5s;
+        background-color: #ffd3b6;
+        padding: 5px;
+        height: 35px;
+        width: 30px;
+        border-radius: 15px;
+      }
+
+      #btu {
+        margin: 0;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        width: 80px;
+        background-color: #fcf8f3;
+        border-radius: 5px;
+        font-family: "Courier New", Courier, monospace;
+        font-weight: bold;
+        font-size: 18px;
+      }
+      div {
+        text-align: center;
+        color: black;
+      }
+      h1 {
+        font-family: "Courier New", Courier, monospace;
+        font-style: oblique;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Can We Hangout Sometimes ?</h1>
+      <img
+        src="https://media.tenor.com/zGm5acSjHCIAAAAC/cat-begging.gif"
+        alt="img"
+      />
+    </div>
+    <button id="btn">No</button>
+
+    <button id="btu" onclick="f1()">Yess</button>
+    <script>
+      const button = document.getElementById("btn");
+      button.addEventListener("mouseover", function () {
+        button.style.left = `${Math.ceil(Math.random() * 90)}%`;
+        button.style.top = `${Math.ceil(Math.random() * 90)}%`;
+      });
+      button.addEventListener("click", function () {
+        alert("(｡ ╯︵╰｡)");
+      });
+      function f1() {
+        alert("ヽ(•‿•)ノ , Okay Then ");
+      }
+    </script>
+  </body>
+</html>
